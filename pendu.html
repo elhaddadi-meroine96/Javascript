@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Pendu</title>
+</head>
+<body>
+<button id="guessLetter" onclick="guessLetter()">JOUER</button>
+    <script>
+  function guessLetter(){
+    let dictionnary=["BONJOUR"];
+    let mysteryWord=mysteryFromDictionnary(dictionnary);
+    let guessWord=initGuessWord(mysteryWord);
+    let userInput="";
+    let findLetter=false;
+    while(!(isSame(mysteryWord,guessWord))){
+
+        do{
+            userInput=(prompt("Mot à trouver :\n"+guessWord.join("")+"\n\nEntrez une lettre:")).toUpperCase();
+        }while(userInput==""||userInput.length!=1||!(isUpperLetter(userInput)));
+
+        findLetter=false;
+        
+        for(let i=0;i<mysteryWord.length;i++){
+            if(userInput===mysteryWord[i]){
+                guessWord[i]=mysteryWord[i];
+                findLetter=true;
+            }
+        }
+
+        if(findLetter){
+            alert(" Tu as trouvé la lettre \""+userInput+"\"!");
+        }
+        else{
+            alert("Mauvaise lettre :(");
+        }
+
+    }
+    alert("Tu as  trouvé le mot qui était \""+guessWord.join("")+"\"\n");
+} 
+
+function isSame(tab1,tab2){
+    let same=false;
+    if(tab1.length===tab2.length){
+        same=true;
+        for(let i=0;i<tab1.length;i++){
+            if(tab1[i]!=tab2[i])
+            {
+                same=false;
+            }
+        }
+    }
+    return same;
+}
+
+function isUpperLetter(input){
+    if(input.length==1){
+        if((input.charCodeAt(0)>=65)&&(input.charCodeAt(0)<=90)){
+            return true;
+        }
+    }
+    return false;
+}
+
+function mysteryFromDictionnary(dictionnary){
+    let word=dictionnary[Math.floor((Math.random()*dictionnary.length))];
+    word.split();
+    return word;
+}
+
+function initGuessWord(word){
+    let guessWord=[];
+    for(let i=0;i<word.length;i++){
+        guessWord.push(". ");
+    }
+    return guessWord;
+}
+    </script>
+    
+</body>
+</html>
