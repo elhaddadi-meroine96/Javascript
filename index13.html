@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="script.js"></script>
+</head>
+<body>
+        <button id="calculMoyenne" OnClick="somme()">calculMoyenne</button>
+    <script>
+function somme() {
+let userInput=0, numberOfValue=0, total=0;
+do{
+do{
+userInput=Number(prompt("Entrez un nombre entier:"));
+}while(!(Number.isInteger(userInput)));
+if(userInput>=0){
+numberOfValue++;
+total+=userInput;
+}
+}while(userInput>=0);
+if(numberOfValue=0){
+alert("Vous n'avez entré aucune valeur\nLa moyenne vaut donc "+total);
+}
+else if(numberOfValue=1){
+alert("vous avez entré une valeur\nLa moyenne vaut donc "+total);
+}
+else{
+alert("Vous avez entré "+numberOfValue+" valeurs\nLa moyenne vaut "+(total/numberOfValue));
+}
+}
+
+
+    </script>
+</body>
+</html>

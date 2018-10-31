@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="script.js"></script>
+</head>
+<body>
+
+    <button onclick="operateur()"> calcule  </button>
+    <script>
+        let a = 3;
+        let b = 2;
+        
+        a=b++;
+        alert(" a=b++ valeur de a:"+a+" valeur de b:"+b);
+        
+
+        a=++b;
+        alert(" a=++b valeur de a:"+a+" valeur de b:"+b);
+        
+        a=b--;
+        alert("a=b-- valeur de a:"+a+" valeur de b:"+b);
+        
+        a=--b;
+        alert("a=--b valeur de a:"+a+" valeur de b:"+b);
+        
+        a+=b++;
+        alert(" a+=b++ valeur de a:"+a+" valeur de b:"+b);
+        
+        a=1, a+=++b;
+        alert("a+=++b valeur de a:"+a+" valeur de b:"+b);
+        
+        a=1, a-=b++;
+        alert(" a-=b++ valeur de a:"+a+" valeur de b:"+b);
+        
+        a=1, a-=++b;
+        alert(" a-=++b valeur de a:"+a+" valeur de b:"+b);
+        
+        a=1, a+=b--;
+        alert(" a+=b-- valeur de a:"+a+" valeur de b:"+b);
+        
+        a=1, a+=--b;
+        alert("a+=--b valeur de a:"+a+" valeur de b:"+b);
+    
+       
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="script.js"></script>
+</head>
+<body>
+
+    <button id="surfaceRectangle" onClick="surfaceRectangle()"><h2>Calculer la surface d'un rectangle</h2></button>
+    <button id="periRectangle" onClick="periRectangle()"><h2>Calculer le périmètre d'un rectangle</h2></button>
+
+
+    <script>
+       function surfaceRectangle () {
+           largeur = prompt("Saisissez  une largeur");
+           longueur = prompt("Saissisez une longueur");
+           result = longueur * largeur;
+           console.log(result);
+       }
+
+       function periRectangle () {
+        largeurb = prompt("Saisissez  une largeur");
+
+        alert(parseFloat(largeurb));
+        longueurb = prompt("Saisissez une longueur");
+        alert(longueurb);
+           resultb = (longueurb * 2) + (largeurb * 2) ;
+           console.log(resultb);
+       }
+
+
+       function rayonCalcul () {
+            rayon = prompt("Saisissez un rayon ")
+
+       }
+               </script>
+</body>
+</html> 

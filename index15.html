@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="script.js"></script>
+</head>
+
+<body>
+        <button id="Valider()" OnClick="Valider()">calculIMC</button>
+
+<script>
+function Valider()
+    {
+        
+		let taille = document.taille.value
+		let poids = document.poids.value
+            if ((taille == "Entrez votre taille (en cm) ici.")|| (taille == "")|| (poids == "Entrez votre poids ici.")|| (poids == ""))  
+                {
+                    alert("Si vous voulez que je calcule votre indice de masse corporel ainsi que votre poids idéal il faut que vous entrez vos mensuration");
+                }
+				else
+				{
+            let nombre1 = (taille*0.01)         
+			let nombre2 = (nombre1*nombre1)     
+			let nombre3 = (poids/nombre2)        
+			alert("Votre indice de masse corporel est de: " + nombre3 + "!");
+			
+			
+			if (nombre3 <= 16)
+			{
+			alert("dénutrition ou famine")
+			}
+			if (nombre3 <=18 && nombre3 >16)
+			{
+			alert("maigreur");
+			}
+			if (nombre3 <=25 && nombre3 >20)
+			{
+			alert("corpulence normale");
+			}
+			if (nombre3 <=28 && nombre3 >26)
+			{
+			alert("surpoids");
+			}
+			if (nombre3 <=32 && nombre3 >28)
+			{
+			alert("obésité sévère");
+			}
+			if (nombre3 >40)
+			{
+			alert("obésité morbide");
+			}
+			
+			
+			
+			let nombre4 = (22*nombre2)        
+			alert("Votre poids idéal est de: " + nombre4 + "!");
+				
+		        }
+    }
+
+</script>
+                
+</body>
+
+</html>

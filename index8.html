@@ -1,0 +1,41 @@
+<!--Créez une fonction soustrait prenant un argument x et renvoyant le résultat de la soustraction de x-2 si x est positif ou nul, la chaîne de caractères "Nombre négatif!" sinon.-->
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="script.js"></script>
+</head>
+<body>
+
+    <button id="affiche()" onclick="affiche()"> affiche</button>
+   <script>
+       
+           let tab =[ -2, 1, 4];
+
+      
+      function soustrait (x) {
+        if (x>=0) {
+            return x-2;
+
+
+        } else {
+           return "Nombre négatif "
+
+        }
+        
+    
+      }
+            function affiche (){
+          alert(soustrait(tab.length[0]));
+          alert(soustrait(tab.length[2]));
+
+
+      }
+
+   </script> 
+</body>
+</html>
+
