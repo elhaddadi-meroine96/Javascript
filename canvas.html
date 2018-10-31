@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+ <body onload="draw();">
+        <canvas id="flag" width="320" height="220">
+              </canvas>
+              <script>
+              var el= document.getElementById("flag");
+
+              if (el && el.getContext) { 
+              var context = el.getContext('2d');
+                  if(context){
+                      context.fillStyle   = "#ffffff"; 
+                      context.strokeStyle = "#CCCCCC"; 
+                      context.lineWidth   = 5;
+                      context.strokeRect(10, 10, 300, 200);
+                      context.fillRect(10, 10, 300, 200);
+                      context.fillStyle = "#d60818";
+                      context.arc(160, 107, 60, 0, Math.PI*2, false);
+                      context.fill();
+            
+                  }
+              }
+</script>
+
+
+</body>
+</html>
