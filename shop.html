@@ -1,0 +1,55 @@
+
+<!--Manipulation :
+
+faire une fonction pour afficher tout les objets
+faire une fonction pour afficher les objets disponibles
+faire une fonction pour afficher les objets dont le niveau minimum est de 10-->
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Shop</title>
+</head>
+<body>
+    <script>
+        //Objet //
+        let objets =[{
+        title:"epée",
+        physic = 150,
+        magic = 30,
+        minLevel = 2,
+        available:true
+        },{
+        title:"hache",
+        physic = 40,
+        magic =20,
+        minLevel = 10,
+        available: false
+
+        },{
+        title:"sceptre",
+        physic = 30,
+        magic = 20,
+        minLevel = 3,
+        available:true
+        }]
+        
+        function afficheObjets() {
+            console.log(objets)
+        }
+        function afficheDispos() {
+            if (available=true){
+                console.log(objets.available)
+            }
+        }
+        function ObjetsNiveaux() {
+            if (minLevel > 10){
+                
+            }
+
+        }
+        </script>
+</body>
+</html>

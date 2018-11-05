@@ -1,0 +1,41 @@
+<!--Crée un objet "Character" qui contient les informations suivantes :
+name (string)
+
+age (numero)
+
+items_to_give (tableau)
+
+afficher chaque information sur une ligne séparés dans la console (for in)
+
+faire une fonction "giveItem" qui permet au PNJ de donner un objet aléatoirement-->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>pnj</title>
+</head>
+<body>
+
+    <script>
+        let Character = {name: "Ryder", age: 7392, items_to_give: ["Potion de vie", "Potion de mana", "Poudre de perlimpinpin"]}
+
+console.log (Character.name)
+console.log (Character.age)
+console.log (Character.items_to_give)
+
+function giveItem(){
+
+return items_to_give[Math.floor(Math.random()*items_to_give.length)];
+
+}
+console.log (Character.items_to_give[giveItem])
+
+
+</script>
+</body>
+</html>
+
+

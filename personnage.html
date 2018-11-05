@@ -1,0 +1,44 @@
+<!--
+    crée un objet "mainCharacter" qui possède le propriétés suivantes :
+name (string)
+level (int)
+life (int)
+weapon (object)
+attack (function)
+l'objet "weapon" possède les propriétés suivantes :
+name (string)
+damage (int)
+Appeler la fonction "attack" du personnage
+la fonction doit retourner : (le nom du personnage) attaque avec l'arme (nom de l'arme) les dégâts sont (niveau du personnage multiplié par le damage de l'arme)
+-->
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Personnage</title>
+</head>
+<body>
+    <script>
+        let mainCharacter = {
+            name : "Vad",
+            lvlLife : function(){
+           let level = parseInt("10") + "<br>";
+           let life = parseInt("600") + "<br>";
+        }
+    };
+    let weapon = {
+        name : "Lame",
+        dmg : function(){
+            let damage = parseInt("95") + "<br>";
+        }
+    };
+
+    function attack() {
+        return (mainCharacter.name), (weapon.name),(damage=level*(weapon.damage));
+    }
+
+    </script>
+</body>
+</html>
